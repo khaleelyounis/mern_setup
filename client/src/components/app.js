@@ -21,13 +21,13 @@ const App = () => (
                 <Link to="/contact">Contact Us</Link>
             </li>
             <li>
-                <Link to="/api_test">API Test</Link>
+                <Link to="/test">API Test</Link>
             </li>
         </ul>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/api_test" component={ApiTest} />
+        <Route path="/test" component={ApiTest} />
     </div>
 );
 
