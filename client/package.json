@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "Starting setup for react redux project",
   "main": "index.js",
+  "proxy": {
+    "/api/*": {
+      "target": "http://localhost:9000"
+    }
+  },
   "scripts": {
     "start": "node dev_server.js",
     "bundle": "node_modules/.bin/webpack --config webpack.deploy.config.js --progress --colors",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run dev --prefix .."
   },
   "author": "Scott Bowler",
   "license": "ISC",
@@ -15,6 +21,7 @@
     "url": "https://github.com/Learning-Fuze/react_starter.git"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
